@@ -9,7 +9,7 @@ import 'package:commerce_layout/Layout/LowProducts.dart';
 
 
 class CommerceLayout extends StatefulWidget {
-  static final id = '/';
+ static final id = '/';
 
   @override
   _CommerceLayoutState createState() => _CommerceLayoutState();
@@ -20,7 +20,7 @@ class _CommerceLayoutState extends State<CommerceLayout> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        bottomNavigationBar: BottomNavBar.bottomNavBar(),
+        bottomNavigationBar: BottomNavBar(),
         body: Column(
           mainAxisSize: MainAxisSize.max,
           children: [

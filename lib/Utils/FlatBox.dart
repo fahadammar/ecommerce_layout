@@ -4,7 +4,7 @@ class FlatBox {
   static Widget verticalFlatBox(String imgName) {
     return Expanded(
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(10.0),
         child: Container(
           height: 210,
           child: Column(
@@ -55,29 +55,31 @@ class FlatBox {
                 ],
               ),
               // Buy This
-              Container(
-                margin: EdgeInsets.fromLTRB(35, 7, 15, 1),
-                child: FlatButton(
-                  onPressed: () {},
-                  color: Colors.transparent,
-                  textColor: Colors.white,
-                  padding: const EdgeInsets.all(0.0),
-                  child: Container(
-                    padding: EdgeInsets.all(12.0),
-                    decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [
-                            Colors.lightBlueAccent,
-                            Colors.lightBlue,
-                            Colors.blue
-                          ],
+              Center(
+                child: Container(
+                  margin: EdgeInsets.fromLTRB(0, 7, 0, 1),
+                  child: FlatButton(
+                    onPressed: () {},
+                    color: Colors.transparent,
+                    textColor: Colors.white,
+                    padding: const EdgeInsets.all(0.0),
+                    child: Container(
+                      padding: EdgeInsets.all(12.0),
+                      decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              Colors.lightBlueAccent,
+                              Colors.lightBlue,
+                              Colors.blue
+                            ],
+                          ),
+                          borderRadius: BorderRadius.circular(10.0)),
+                      child: Text(
+                        "Buy This",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
                         ),
-                        borderRadius: BorderRadius.circular(10.0)),
-                    child: Text(
-                      "Buy This",
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),

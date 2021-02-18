@@ -1,8 +1,18 @@
-import 'package:commerce_layout/Utils/NavBar.dart';
 import 'package:flutter/material.dart';
 
-class BottomNavBar {
-  static Widget bottomNavBar() {
+// External Widgets
+import 'package:commerce_layout/MainWidget/CommerceLayout.dart';
+import 'package:commerce_layout/MainWidget/Wishlist.dart';
+import 'package:commerce_layout/Utils/NavBar.dart';
+
+class BottomNavBar extends StatefulWidget {
+  @override
+  _BottomNavBarState createState() => _BottomNavBarState();
+}
+
+class _BottomNavBarState extends State<BottomNavBar> {
+  @override
+  Widget build(BuildContext context) {
     return Container(
       // Parent Container Margin & Height
       margin: EdgeInsets.fromLTRB(5, 0, 5, 0),
@@ -22,7 +32,11 @@ class BottomNavBar {
           topLeft: Radius.circular(30.0),
           topRight: Radius.circular(30.0),
         ),
-        child: NavBar.bar(),
+        child: NavBar(
+          context: context,
+          commerceID: CommerceLayout.id,
+          wishlistID: WishList.id,
+        ),
       ),
     );
   }
